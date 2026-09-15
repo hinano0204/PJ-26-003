@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/prehab/Scenes/New Scene.unity
+    path: Assets/Scenes/start.unity
     guid: 343d900b0b7924a44891499e81698056
   - enabled: 1
-    path: Assets/prehab/Scenes/NewObake.unity
+    path: Assets/Scenes/Slect.unity
     guid: 6dcfc44f3da656143947f230a7f162b1
   - enabled: 1
-    path: Assets/prehab/Scenes/SampleScene.unity
+    path: Assets/Scenes/main.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
