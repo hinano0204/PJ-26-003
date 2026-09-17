@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7e06989cd4e3e274b94145e7c6c58b64, type: 3}
       propertyPath: m_TagString
-      value: Candy
+      value: Tirget
       objectReference: {fileID: 0}
     - target: {fileID: 4899486392329470165, guid: 7e06989cd4e3e274b94145e7c6c58b64, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
