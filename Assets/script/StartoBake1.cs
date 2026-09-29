@@ -14,13 +14,13 @@ public class StartoBake : MonoBehaviour
         rect.anchoredPosition += Vector2.up * speed * Time.deltaTime;
 
         // XÇ™1980Çí¥Ç¶ÇΩÇÁç∂Ç÷ñﬂÇ∑
-        if (rect.anchoredPosition.y<= 300)
+        if (rect.anchoredPosition.y<= -1)
         {
             muki = false;
 
         }
 
-        if (rect.anchoredPosition.y>= 400)
+        if (rect.anchoredPosition.y>= 2)
         {
             muki = true;
         }
@@ -28,12 +28,12 @@ public class StartoBake : MonoBehaviour
 
         if (muki ==true)
         {
-            speed = -100;
+            speed = -1;
         
         }
         else
         {
-            speed = 100;
+            speed = 1;
         }
 
 
