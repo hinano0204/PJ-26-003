@@ -88,7 +88,7 @@ PrefabInstance:
       addedObject: {fileID: 9092677287422477809}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7e06989cd4e3e274b94145e7c6c58b64, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7813344212949062809}
+      addedObject: {fileID: -4297350957908052206}
   m_SourcePrefab: {fileID: 100100000, guid: 7e06989cd4e3e274b94145e7c6c58b64, type: 3}
 --- !u!1 &5913105676612330702 stripped
 GameObject:
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2201119351
+  GlobalObjectIdHash: 2314533604
   InScenePlacedSourceGlobalObjectIdHash: 688186402
   m_InScenePlacedDisabledByDefault: 0
   DeferredDespawnTick: 0
@@ -167,8 +167,8 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
---- !u!136 &7813344212949062809
-CapsuleCollider:
+--- !u!65 &-4297350957908052206
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -182,11 +182,9 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.006
-  m_Height: 0.0007
-  m_Direction: 1
-  m_Center: {x: -0.0006, y: 0.0065, z: 0}
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
