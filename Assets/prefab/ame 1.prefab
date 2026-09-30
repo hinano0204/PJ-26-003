@@ -88,7 +88,7 @@ PrefabInstance:
       addedObject: {fileID: 9092677287422477809}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7e06989cd4e3e274b94145e7c6c58b64, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -4297350957908052206}
+      addedObject: {fileID: 6028182321608576490}
   m_SourcePrefab: {fileID: 100100000, guid: 7e06989cd4e3e274b94145e7c6c58b64, type: 3}
 --- !u!1 &5913105676612330702 stripped
 GameObject:
@@ -167,7 +167,7 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
---- !u!65 &-4297350957908052206
+--- !u!65 &6028182321608576490
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
