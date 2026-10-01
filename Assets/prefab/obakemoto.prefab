@@ -346,3 +346,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  m_playerMaterials:
+  - {fileID: 2100000, guid: e60bec463fcda844fbedd3ea047fde58, type: 2}
+  - {fileID: 2100000, guid: 06b13f0bf12d73947851e8cc6192d047, type: 2}

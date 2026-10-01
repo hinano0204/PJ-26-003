@@ -1,17 +1,10 @@
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-
 public class SelectBotton : MonoBehaviour
-
-
 {
-
-#if UNITY_EDITOR
-    [SerializeField] private SceneAsset sceneAsset;
-#endif
+    [SerializeField] private string sceneName;
 
     private bool isLoading = false;
 
@@ -22,22 +15,21 @@ public class SelectBotton : MonoBehaviour
         isLoading = true;
 
         Button button = GetComponent<Button>();
+
         if (button != null)
         {
             button.interactable = false;
         }
 
         Debug.Log("ボタン押された");
-#if UNITY_EDITOR
-        if (sceneAsset != null)
+
+        if (!string.IsNullOrEmpty(sceneName))
         {
-            string sceneName = sceneAsset.name;
             SceneManager.LoadScene(sceneName);
         }
         else
         {
-            Debug.LogWarning("シーンが設定されていません");
+            Debug.LogWarning("シーン名が設定されていません");
         }
-#endif
     }
 }

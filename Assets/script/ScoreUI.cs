@@ -1,7 +1,7 @@
 ﻿using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Experimental.GraphView.GraphView;
+
 
 public class ScoreUI : MonoBehaviour
 {
