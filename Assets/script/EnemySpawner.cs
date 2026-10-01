@@ -15,7 +15,7 @@ public class EnemySpawner : NetworkBehaviour
 
         // 3•bŒo‰ß‚²‚Æ‚É“G‚ðo‚·ˆ—
         timer += Time.deltaTime;
-        if (timer >3.0f)
+        if (timer >6.0f)
         {
             timer = 0f;
             SpawnEnemy();
