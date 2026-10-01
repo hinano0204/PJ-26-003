@@ -72,7 +72,7 @@ public class TestPL2 : NetworkBehaviour
         if (!IsServer) return;
 
         // 当たった相手のタグが「Target」だった場合
-        if (other.CompareTag("candy"))
+        if (other.CompareTag("Target"))
         {
             //スコアを加算する。
             playerScore.Value += 1;
