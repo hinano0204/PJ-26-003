@@ -24,21 +24,36 @@ public class EnemyMove : NetworkBehaviour
     {
         
         Enemy.SetActive(true);
+
+        //サーバが敵を動かす
+        if (!IsServer)  //サーバじゃなかったら何もしない
+            return;
+
+        //一番近いプレイヤーを探す
+        FindNearestPlayer();
+
+        //プレイヤーがいなければなんもしないよ
+        if (player == null)
+            return;
+
         Vector3 pos = transform.position;
         Vector3 targetpos = player.position;
         Vector3 dir = (targetpos - pos).normalized;
-        if (targetpos.x > pos.x)
-        {
-            pos.x += speed * Time.deltaTime;
-        }
-        else
-        {
-            pos.x -= speed * Time.deltaTime;
-        }
-
-        transform.position = pos;
 
         RaycastHit hit;
+
+        //if (targetpos.x > pos.x)
+        //{
+        //    pos.x += speed * Time.deltaTime;
+        //}
+        //else
+        //{
+        //    pos.x -= speed * Time.deltaTime;
+        //}
+
+        //transform.position = pos;
+
+        //RaycastHit hit;
         
 
         if (Physics.Raycast(transform.position,dir,out hit,rayDistance))   
@@ -80,4 +95,26 @@ public class EnemyMove : NetworkBehaviour
             );
     }
 
+    //------------------------
+    //一番近いプレイヤーを探す
+    //------------------------
+    private void FindNearestPlayer()
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        float nearestDistance = Mathf.Infinity;
+        Transform nearestPlayer = null;
+        foreach( GameObject p in players )
+        {
+            float distance = Vector3.Distance
+                (
+                transform.position, p.transform.position
+                );
+            if(distance < nearestDistance )
+            {
+                nearestDistance = distance;
+                nearestPlayer = p.transform;
+            }
+        }
+        player = nearestPlayer;
+    }
 }
