@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class Director : MonoBehaviour
 {
     public GameObject toggle;     // ホストのチェックボックス
     public GameObject inputField; // IPアドレスの入力欄
+    public GameObject lobbyManagerPrefab; // ロビーの参加者リストを管理するネットワークプレハブ
 
     void Start()
     {
@@ -42,13 +44,18 @@ public class Director : MonoBehaviour
         {
             // ホストとして起動
             NetworkManager.Singleton.StartHost();
-            // Gameシーンを読み込む
-            NetworkManager.Singleton.SceneManager.LoadScene("main", LoadSceneMode.Single);
+
+            // ロビーの参加者リストを管理するネットワークオブジェクトを生成
+            var lobbyManagerObject = Instantiate(lobbyManagerPrefab);
+            lobbyManagerObject.GetComponent<NetworkObject>().Spawn();
         }
         else
         {
             // クライアントとして起動
             NetworkManager.Singleton.StartClient();
         }
+
+        // ログイン画面からロビー画面へ切り替える（Gameシーンへの遷移はロビーのスタートボタンで行う）
+        LobbyUI.Instance.ShowLobby();
     }
 }
