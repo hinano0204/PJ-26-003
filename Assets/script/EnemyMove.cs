@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.AI;
@@ -12,11 +13,18 @@ public class EnemyMove : NetworkBehaviour
     public GameObject Enemy;
     public float avoidDistance = 2f;
     public float rayDistance = 1f;
-    //private int count;
+
+    //敵が最初にいた場所
+    private Vector3 spawnPosition;
+
+    //リスポーン中かどうか
+    private bool isRespawning = false;
 
     private void Start()
     {
-      // Enemy.SetActive(false);
+        //最初のエネミーの位置だよ
+        spawnPosition = transform.position;
+
         Invoke(nameof(Update), 5f);
         Enemy.SetActive(false);
     }
@@ -24,6 +32,9 @@ public class EnemyMove : NetworkBehaviour
     {
         
         Enemy.SetActive(true);
+        //リスポーン中なら移動しない
+        if (isRespawning)
+            return;
 
         //サーバが敵を動かす
         if (!IsServer)  //サーバじゃなかったら何もしない
@@ -42,18 +53,6 @@ public class EnemyMove : NetworkBehaviour
 
         RaycastHit hit;
 
-        //if (targetpos.x > pos.x)
-        //{
-        //    pos.x += speed * Time.deltaTime;
-        //}
-        //else
-        //{
-        //    pos.x -= speed * Time.deltaTime;
-        //}
-
-        //transform.position = pos;
-
-        //RaycastHit hit;
         
 
         if (Physics.Raycast(transform.position,dir,out hit,rayDistance))   
@@ -116,5 +115,47 @@ public class EnemyMove : NetworkBehaviour
             }
         }
         player = nearestPlayer;
+    }
+
+    //--------------------
+    //プレイヤーにぶつかった
+    //--------------------
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //サーバだけ
+        if (!IsServer)
+            return;
+
+        //Playerタグじゃないなら無視
+        if (!collision.gameObject.CompareTag("Player"))
+            return;
+        //すでにリスポーン中ならむし
+        if (isRespawning)
+            return;
+
+        StartCoroutine(RespawnEnemy());
+    }
+
+    //-------------------
+    //敵をリスポーン
+    //-------------------
+
+    private IEnumerator RespawnEnemy()
+    {
+        isRespawning = true;
+
+        //けす
+        Enemy.SetActive(false);
+
+        //１０秒待つ
+        yield return new WaitForSeconds(10f);
+
+        //最初の場所に戻す
+        transform.position = spawnPosition;
+
+        //敵出現
+        Enemy.SetActive(true);
+        isRespawning = false;
     }
 }
