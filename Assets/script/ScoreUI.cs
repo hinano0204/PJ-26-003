@@ -67,7 +67,7 @@ public class ScoreUI : MonoBehaviour
                 int score = players[i].playerScore.Value;
 
                 // 10点以上で勝者
-                if (score >= 10 && winner == null)
+                if (score >= 4 && winner == null)
                 {
                     winner = players[i];
                 }
