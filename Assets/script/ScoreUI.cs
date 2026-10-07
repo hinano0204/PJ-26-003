@@ -7,6 +7,9 @@ public class ScoreUI : MonoBehaviour
 {
     public Text[] scoreTexts = new Text[4];
 
+    [SerializeField] private AudioClip getSound;
+    [SerializeField] private AudioSource audioSource;
+
     // PL1～PL4の勝利画像
     public Image[] winImages = new Image[4];
 
@@ -75,6 +78,10 @@ public class ScoreUI : MonoBehaviour
                 // スコア更新
                 if (score != m_cachedScores[i])
                 {
+                    if (score > m_cachedScores[i])
+                    {
+                        audioSource.PlayOneShot(getSound);
+                    }
                     m_cachedScores[i] = score;
                     scoreTexts[i].text = score.ToString();
                 }

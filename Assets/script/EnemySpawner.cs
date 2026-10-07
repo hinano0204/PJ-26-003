@@ -5,6 +5,7 @@ public class EnemySpawner : NetworkBehaviour
 {
     public GameObject enemyPrefab; // 敵のプレハブ（あらかじめ登録しておく）
     private float timer = 0f;
+    [SerializeField] private AudioClip getSound;
 
 
     void Update()
