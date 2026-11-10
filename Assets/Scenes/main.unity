@@ -870,7 +870,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 906bf1abf93ebd249b18497bbd9802b7, type: 3}
     m_FontSize: 142
     m_FontStyle: 1
     m_BestFit: 0
@@ -1684,7 +1684,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 906bf1abf93ebd249b18497bbd9802b7, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -1696,7 +1696,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back to Lobby
+  m_Text: "\u30ED\u30D3\u30FC\u306B\u3082\u3069\u308B"
 --- !u!222 &330466616
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5362,7 +5362,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 906bf1abf93ebd249b18497bbd9802b7, type: 3}
     m_FontSize: 142
     m_FontStyle: 1
     m_BestFit: 0
@@ -5929,7 +5929,11 @@ PrefabInstance:
       addedObject: {fileID: 1373965319}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8268dce79ff4b454e8e81d88d280b424, type: 3}
       insertIndex: -1
+<<<<<<< HEAD
       addedObject: {fileID: 1373965322}
+=======
+      addedObject: {fileID: 1373965321}
+>>>>>>> 4c6b8eb (Add.フォントの変更)
   m_SourcePrefab: {fileID: 100100000, guid: 8268dce79ff4b454e8e81d88d280b424, type: 3}
 --- !u!4 &1373965316 stripped
 Transform:
@@ -6007,14 +6011,21 @@ CapsuleCollider:
   m_Radius: 0.009
   m_Height: 0.03
   m_Direction: 1
+<<<<<<< HEAD
   m_Center: {x: 0, y: 0.02, z: 0}
 --- !u!54 &1373965322
 Rigidbody:
+=======
+  m_Center: {x: 0, y: 0.019, z: 0}
+--- !u!114 &1373965321
+MonoBehaviour:
+>>>>>>> 4c6b8eb (Add.フォントの変更)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1373965317}
+<<<<<<< HEAD
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -6141,6 +6152,47 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.034, y: 5.0000014, z: 0.008920543}
   m_Center: {x: -0.0049411044, y: -3.9273515e-11, z: -0.00016141895}
+=======
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  NetworkTransformExpanded: 0
+  AutoOwnerAuthorityTickOffset: 1
+  PositionInterpolationType: 0
+  RotationInterpolationType: 0
+  ScaleInterpolationType: 0
+  PositionLerpSmoothing: 1
+  PositionMaxInterpolationTime: 0.1
+  RotationLerpSmoothing: 1
+  RotationMaxInterpolationTime: 0.1
+  ScaleLerpSmoothing: 1
+  ScaleMaxInterpolationTime: 0.1
+  AuthorityMode: 0
+  TickSyncChildren: 0
+  UseUnreliableDeltas: 0
+  SyncPositionX: 1
+  SyncPositionY: 1
+  SyncPositionZ: 1
+  SyncRotAngleX: 1
+  SyncRotAngleY: 1
+  SyncRotAngleZ: 1
+  SyncScaleX: 1
+  SyncScaleY: 1
+  SyncScaleZ: 1
+  PositionThreshold: 0.001
+  RotAngleThreshold: 0.01
+  ScaleThreshold: 0.01
+  UseQuaternionSynchronization: 0
+  UseQuaternionCompression: 0
+  UseHalfFloatPrecision: 0
+  InLocalSpace: 0
+  SwitchTransformSpaceWhenParented: 0
+  Interpolate: 1
+  SlerpPosition: 0
+>>>>>>> 4c6b8eb (Add.フォントの変更)
 --- !u!1001 &1385107966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7529,7 +7581,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 906bf1abf93ebd249b18497bbd9802b7, type: 3}
     m_FontSize: 142
     m_FontStyle: 1
     m_BestFit: 0
@@ -8257,7 +8309,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 906bf1abf93ebd249b18497bbd9802b7, type: 3}
     m_FontSize: 142
     m_FontStyle: 1
     m_BestFit: 0
