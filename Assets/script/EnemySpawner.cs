@@ -29,7 +29,7 @@ public class EnemySpawner : NetworkBehaviour
 
         Vector2 random = Random.insideUnitCircle * 5.3f;
 
-        Vector3 pos = new Vector3(random.x, random.y, 0.0f);
+        Vector3 pos = new Vector3(random.x, 1.1f, random.y);
 
     
 
