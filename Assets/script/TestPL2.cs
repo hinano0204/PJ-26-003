@@ -87,6 +87,13 @@ public class TestPL2 : NetworkBehaviour
             NetworkVariableWritePermission.Server
         );
 
+    public NetworkVariable<int> carryingCandy =
+        new NetworkVariable<int>(
+            0,
+            NetworkVariableReadPermission.Everyone,
+            NetworkVariableWritePermission.Server
+        );
+
 
     // =========================================================
     // Enemyにぶつかったとき
@@ -100,13 +107,13 @@ public class TestPL2 : NetworkBehaviour
 
       
 
-        if (playerScore.Value > 0)
+        if (carryingCandy.Value > 0)
         {
-            playerScore.Value--;
+            carryingCandy.Value--;
 
             Debug.Log(
                 "Enemyにぶつかった！ スコア: "
-                + playerScore.Value
+                + carryingCandy.Value
             );
         }
         else
@@ -132,11 +139,11 @@ public class TestPL2 : NetworkBehaviour
         // Targetだった場合
         if (other.CompareTag("Target"))
         {
-            // スコアを加算
-            playerScore.Value += 1;
+            // 手持ち飴を加算
+            carryingCandy.Value += 1;
 
             Debug.Log(
-                "得点: " + playerScore.Value
+                "手持ちの飴: " + carryingCandy.Value
             );
 
 
