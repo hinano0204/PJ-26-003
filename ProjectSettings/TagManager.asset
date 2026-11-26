@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Target
   - Enemy
+  - Bag
   layers:
   - Default
   - TransparentFX
