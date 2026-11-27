@@ -25,7 +25,7 @@ public class EnemySpawner : NetworkBehaviour
 
     void SpawnEnemy()
     {
-        Debug.Log("uuuu");
+        //Debug.Log("uuuu");
 
         Vector2 random = Random.insideUnitCircle * 5.3f;
 
